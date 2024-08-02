@@ -1,0 +1,187 @@
+{
+  "main": {
+    "id": "0f79c8a8705f314d",
+    "type": "split",
+    "children": [
+      {
+        "id": "b644cb8bbea25f56",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dccef81abf00f2ea",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Draw/练习记录.excalidraw.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "561b42be723cd1c7",
+    "type": "split",
+    "children": [
+      {
+        "id": "74f5c658c718b37b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "304c491a79d25bf5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0f33688e408592e5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Draw/练习记录.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "2739f430c4658088",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "52715267da26ca00",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 355.5
+  },
+  "right": {
+    "id": "c87a6a426ecadb82",
+    "type": "split",
+    "children": [
+      {
+        "id": "c0ed9d66ab7f56d1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dddcabd45d032d7e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "eaa411425d884d18",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Draw/练习记录.excalidraw.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 354.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": true,
+      "canvas:新建白板": true,
+      "daily-notes:打开/创建今天的日记": true,
+      "templates:插入模板": true,
+      "command-palette:打开命令面板": true,
+      "obsidian-excalidraw-plugin:新建绘图文件": true
+    }
+  },
+  "active": "304c491a79d25bf5",
+  "lastOpenFiles": [
+    "README.md",
+    "任务列表.md",
+    "Draw/练习记录.excalidraw.md",
+    "Pasted Image 20240802115509_266.png",
+    "未命名.md",
+    "Java技术栈/分布式/分布式锁.md",
+    "Draw/Excaildraw/Gateway-Auth.excalidraw.md",
+    "Draw/Excaildraw/token.excalidraw.md",
+    "Java技术栈/分布式/分布式事务.md",
+    "Draw/练习记录.excalidraw.png",
+    "Draw/练习记录.excalidraw.svg",
+    "Draw/Drawing 2024-08-01 18.09.11.excalidraw.md",
+    "Draw/记录.md",
+    "Draw/未命名.md",
+    "Draw/Excaildraw",
+    "Draw/huabu.canvas",
+    "Draw/算法/链表反转.md",
+    "其他/杂项/font/平方韶华体.ttf",
+    "Draw/token.excalidraw.svg",
+    "Draw/token.excalidraw.png",
+    "Draw/DrawIO",
+    "Draw/新建文件夹",
+    "Draw/springboot/spring启动.canvas",
+    "Java技术栈/Spring/SpringSecurity/springsecurity.md",
+    "Pasted image 20240731113249.png",
+    "Java技术栈/分布式事务/分布式事务.md",
+    "Java技术栈/其他/swagger使用.md",
+    "Java技术栈/其他/SpringCache使用.md",
+    "Java技术栈/其他/maven整合log.md",
+    "Java技术栈/其他/pom依赖管理.md",
+    "Java技术栈/分布式事务",
+    "Java技术栈/Spring",
+    "Draw/算法/未命名.md",
+    "Draw/算法",
+    "pictrue/chuyin.png",
+    "前端技术栈/vue/基础/基础.md",
+    "pictrue",
+    "Java技术栈/Spring/SpringBoot/AOP/自定义.md",
+    "Draw/springboot",
+    "Java技术栈/Spring/SpringBoot/AOP/基础.md",
+    "springboot.md",
+    "Draw/Springboot.canvas",
+    "日记/2024-07-29.md",
+    "日记",
+    "其他/认证流程图.canvas",
+    "Java技术栈/javaSE/集合/集合.md",
+    "Draw/test.md",
+    "前端技术栈/vue/基础/测试.canvas",
+    "未命名.canvas"
+  ]
+}

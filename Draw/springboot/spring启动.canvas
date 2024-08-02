@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"46c3de330d295a93","x":-240,"y":-90,"width":280,"height":60,"type":"text","text":"@ComponentScan"},
+		{"id":"2aecf77e43f47aa6","x":-240,"y":60,"width":280,"height":60,"type":"text","text":"@SpringBootConfiguration"},
+		{"id":"b3b87d463de44eed","x":-240,"y":-240,"width":280,"height":50,"type":"text","text":"@EnableAutoConfiguration"},
+		{"id":"9dc1fbe80cb3454d","x":-620,"y":-90,"width":250,"height":60,"type":"text","text":"@SpringbootApplication"},
+		{"id":"5d5977671b4ba4ef","x":190,"y":-540,"width":280,"height":180,"type":"text","text":"@AutoConfigurationPackage\n默认将主配置类（@SpringbootApplication）包及其自包里的所有组件扫描到IOC容器中"},
+		{"id":"381818aed5c0a9e0","x":190,"y":-310,"width":310,"height":95,"type":"text","text":"@Import(AutoConfigurationImportSelector.class)\n用来注入自动配置类"}
+	],
+	"edges":[
+		{"id":"5c7a1514c15255b0","fromNode":"9dc1fbe80cb3454d","fromSide":"right","toNode":"b3b87d463de44eed","toSide":"left"},
+		{"id":"6e6a65be4c18d8ac","fromNode":"9dc1fbe80cb3454d","fromSide":"right","toNode":"46c3de330d295a93","toSide":"left"},
+		{"id":"dd43e33d5cdeb616","fromNode":"9dc1fbe80cb3454d","fromSide":"right","toNode":"2aecf77e43f47aa6","toSide":"left"},
+		{"id":"120e65e7809d5a87","fromNode":"b3b87d463de44eed","fromSide":"right","toNode":"5d5977671b4ba4ef","toSide":"left"},
+		{"id":"8b7eaecb5262b29c","fromNode":"b3b87d463de44eed","fromSide":"right","toNode":"381818aed5c0a9e0","toSide":"left"}
+	]
+}

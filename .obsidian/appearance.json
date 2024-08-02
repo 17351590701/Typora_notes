@@ -1,0 +1,15 @@
+{
+  "monospaceFontFamily": "JetBrains Mono",
+  "textFontFamily": "HarmonyOS Sans SC",
+  "cssTheme": "Minimal",
+  "accentColor": "",
+  "theme": "obsidian",
+  "baseFontSizeAction": true,
+  "nativeMenus": false,
+  "showViewHeader": false,
+  "interfaceFontFamily": "HarmonyOS Sans SC",
+  "baseFontSize": 16,
+  "enabledCssSnippets": [
+    "extended-colorschemes"
+  ]
+}

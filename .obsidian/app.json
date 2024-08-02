@@ -1,0 +1,14 @@
+{
+  "promptDelete": false,
+  "useMarkdownLinks": false,
+  "showRibbon": false,
+  "showInlineTitle": true,
+  "trashOption": "none",
+  "readableLineLength": false,
+  "strictLineBreaks": false,
+  "foldHeading": true,
+  "showLineNumber": false,
+  "spellcheck": false,
+  "autoPairMarkdown": false,
+  "autoPairBrackets": true
+}

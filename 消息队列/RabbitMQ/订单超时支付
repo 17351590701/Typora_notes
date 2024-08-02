@@ -1,0 +1,199 @@
+## 订单支付超时
+
+> 生成订单后（待支付），将其放入延迟队列中，设置一分钟后，消息路由进死信队列
+>
+> 监听死信队列，判断该订单是否支付成功，如果失败，则进行库存回滚
+
+1. 导入`RabbitMQ`依赖
+
+   ```xml
+   <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-amqp</artifactId>
+   </dependency>
+   ```
+
+2. 启动`RabbitMQ`客户端查看虚拟主机,http://localhost:15672 登录用户(guest guest)
+
+3. 配置 `application.yml`文件
+
+   ```yaml
+   spring:
+   	rabbitmq:
+   		host: 127.0.0.1
+   		username: guest
+   		password: guest
+   		port: 5672
+   		virtual-host: / #虚拟主机地址
+   		listener:
+   			simple:
+   				acknowledge-mode: manual #手动签收消息
+   ```
+
+4. `RabbitMQ`配置类
+
+   > 配置了一个消息队列和一个死信队列，消息队列中的消息如果存活时间超过60秒，则会被发送到死信队列中
+
+   ```java
+   @Configuration
+   public class OrderQueueConfig {
+       // 死信队列
+       public static final String ORDER_DEAD_QUEUE = "order.dead.queue";
+       // 死信交换机
+       public static final String ORDER_DEAD_EX = "order.dead.ex";
+       // 消息死后走的路由键
+       public static final String ORDER_DEAD_KEY = "order.dead.key";
+       // 消息队列
+       public static final String ORDER_MS_QUEUE = "order.ms.queue";
+       
+       /**
+        * 创建死信队列
+        */
+       @Bean
+       public Queue orderDeadQueue() {
+           return new Queue(ORDER_DEAD_QUEUE);
+       }
+   
+       /**
+        * 创建死信交换机
+        */
+       @Bean
+       public DirectExchange orderDeadEx() {
+           return new DirectExchange(ORDER_DEAD_EX);
+       }
+   
+       /**
+        * 创建消息队列，并设置消息存活时长、消息死后走的交换机和路由键
+        */
+       @Bean
+       public Queue orderMsQueue() {
+           // 配置延迟队列参数
+           Map<String, Object> map = new HashMap<>();
+           map.put("x-message-ttl", 60 * 1000); //消息存活时间60s
+           map.put("x-dead-letter-exchange", ORDER_DEAD_EX);
+           map.put("x-dead-letter-routing-key", ORDER_DEAD_KEY);
+           return new Queue(ORDER_MS_QUEUE, true, false, false, map);
+       }
+   
+       /**
+        * 绑定死信队列到死信交换机并指定路由键
+        */
+       @Bean
+       public Binding orderDeadBind() {
+           return BindingBuilder.bind(orderDeadQueue()).to(orderDeadEx()).with(ORDER_DEAD_KEY);
+       }
+   }
+   ```
+
+   > ChangeStock类：
+   >
+   > - List<ProdChange> prodChangeList：商品prod购买数量对象集合
+   > - List<SkuChange> skuChangeList：商品sku购买数量对象集合
+
+5. 会员提交订单，发送消息(使用延迟队列与死信队列)
+
+   `OrderServiceImpl.java`
+
+   ```java
+   /**
+   * @param orderNumber 订单编号
+   * @param changeStock 改变的库存数量
+   */
+   public void sendMsMsg(String orderNumber,CheckStock checkStock){
+      //将数据存放到json对象中，并转化为json格式字符串
+      JSONObject jsonObject = new JSONObject();
+      jsonObject.put("orderNumber",orderNumber);
+      jsonObject.put("checkStock",changeStock);
+      //发送消息到延迟队列,1分钟后，消息进入死信队列
+      rabbitTemplate.convertAndSend(OrderQueueConfig.ORDER_MS_QUEUE,jsonObject.toJsonString());
+   }
+   
+   /**
+   * 会员提交订单: 超时未支付订单回滚方法
+   */
+   @Override
+   public void orderRollBack(Order order,ChangStock changeStock){
+      // 修改订单信息
+      order.setUpdateTime(new Date());
+      order.setFinallyTime(new Date());
+      // 6:订单失败（超时、退款、买家取消...）
+      order.setStatus(6);
+      // 订单关闭原因：1：超时未支付
+      order.setCloseType(1);
+      orderMapper.updateById(order);
+      // 回滚商品prod和sku的库存数量
+      List<ProdChange> prodChangeList = changeStock.getProdChangeList();
+      prodChangeList.forEach(prodChange->prodChange.setCount(prodChange.getCount()*-1));
+      List<SkuChange> skuChangeList = changeStock.getSkuChangeList();
+      skuChangeList.forEach(skuChange->skuChange.setCount(skuChange.getCount()*-1));
+      //回滚商品prod和sku库存数量
+      Result<Boolean> result = orderProdFeign.changeProdAndSkuStock(changeStock);
+      //回滚报错
+      if(BusinessEnum.OPERATION_FAIL.getCode().equals(result.getCode())){
+         //抛出自定义异常
+         throw new BusinessException("回滚商品失败")
+      }
+   }
+   ```
+
+6. 监听订单死信队列
+
+   ```java
+   @Component
+   @Slf4j
+   public class OrderDeadListener {
+      @Autowired
+      private OrderService orderService;
+      
+      @RabbitListener(queues = OrderQueueConfig.ORDER_DEAD_QUEUE)
+      public void handlerOrderDeadMsg(Message message, Channel channel) {
+         // 获取消息
+         JSONObject jsonObject = JSONObject.parseObject(new String(message.getBody()));
+         // 获取订单编号
+         String orderNumber = jsonObject.getString("orderNumber");
+         // 获取商品数量对象
+         ChangeStock changeStock = jsonObject.getObject("changeStock", ChangeStock.class);
+         // 根据订单编号查询订单
+         Order order = orderService.getOne(new LambdaQueryWrapper<Order>()
+                                           .eq(Order::getOrderNumber, orderNumber)
+                                          );
+   
+         // 判断订单是否存在
+         if (ObjectUtil.isNull(order)) {
+            log.error("订单编号{}无效",orderNumber);
+            try {
+               // 手动签收消息
+               channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);
+            } catch (IOException e) {
+               throw new RuntimeException(e);
+            }
+            return;
+         }
+         // 判断订单是否已支付
+         if (1 == order.getIsPayed()) {
+            try {
+               // 签收消息
+               channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);
+            } catch (IOException e) {
+               throw new RuntimeException(e);
+            }
+            return;
+         }
+   
+         // 目前还不确定当前订单是否已经支付
+         // 必须调用第三方的订单查询接口，查询订单支付情况，如果第三方说：订单已支付，签收消息结束，否则订单数据回滚
+   
+         // 假设：当前订单已经确认没有支付
+         try {
+            // 订单回滚
+            orderService.orderRollBack(order,changeStock);
+            // 签收消息
+            channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);
+         } catch (IOException e) {
+            throw new RuntimeException(e);
+         }
+   
+      }
+   }
+   ```
+   
