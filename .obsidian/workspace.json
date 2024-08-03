@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b644cb8bbea25f56",
+        "id": "7bef299e039b78fa",
         "type": "tabs",
         "children": [
           {
-            "id": "dccef81abf00f2ea",
+            "id": "f0c0eaf419834089",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 355.5
+    "width": 355.5,
+    "collapsed": true
   },
   "right": {
     "id": "c87a6a426ecadb82",
@@ -132,11 +133,11 @@
       "obsidian-excalidraw-plugin:新建绘图文件": true
     }
   },
-  "active": "304c491a79d25bf5",
+  "active": "f0c0eaf419834089",
   "lastOpenFiles": [
+    "Draw/练习记录.excalidraw.md",
     "README.md",
     "任务列表.md",
-    "Draw/练习记录.excalidraw.md",
     "Pasted Image 20240802115509_266.png",
     "未命名.md",
     "Java技术栈/分布式/分布式锁.md",

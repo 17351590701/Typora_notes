@@ -11,7 +11,7 @@
    
    git add .  # . 代表添加当前目录下所有文件
    
-   git commit -m '***' # *** 为提交描述
+   git commit -m '...' # ... 为提交描述
    
    # 远程连接仓库 http 地址
    git remote add origin https://github.com/17351590701/typora_note.git  
@@ -28,5 +28,5 @@
    
    git commit -m '...'
    
-   git push
+   git push origin master
    ```
