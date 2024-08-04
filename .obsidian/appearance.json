@@ -1,9 +1,9 @@
 {
   "monospaceFontFamily": "JetBrains Mono",
   "textFontFamily": "HarmonyOS Sans SC",
-  "cssTheme": "Minimal",
+  "cssTheme": "Border",
   "accentColor": "",
-  "theme": "obsidian",
+  "theme": "moonstone",
   "baseFontSizeAction": true,
   "nativeMenus": false,
   "showViewHeader": false,

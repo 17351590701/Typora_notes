@@ -1185,10 +1185,10 @@ return 0
 1.引入依赖
 
 ```xml
-        <!--Redisson-->
+        <!--Redisson启动依赖，包含了Redisson依赖-->
         <dependency>
             <groupId>org.redisson</groupId>
-            <artifactId>redisson</artifactId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
             <version>3.30.0</version>
         </dependency>
 ```

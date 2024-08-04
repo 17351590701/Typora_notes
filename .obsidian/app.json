@@ -4,7 +4,7 @@
   "showRibbon": false,
   "showInlineTitle": true,
   "trashOption": "none",
-  "readableLineLength": false,
+  "readableLineLength": true,
   "strictLineBreaks": false,
   "foldHeading": true,
   "showLineNumber": false,
