@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7235490f09250b31",
+        "id": "ece505df057bf047",
         "type": "tabs",
         "children": [
           {
-            "id": "0398cc3ac6711198",
+            "id": "0314dc37caf01807",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -135,10 +135,11 @@
       "obsidian-excalidraw-plugin:新建绘图文件": true
     }
   },
-  "active": "0398cc3ac6711198",
+  "active": "0314dc37caf01807",
   "lastOpenFiles": [
-    "Java技术栈/知识点任务列表.md",
+    "Pasted image 20240805213252.png",
     "Java技术栈/面试整合.md",
+    "Java技术栈/知识点任务列表.md",
     "Draw/练习记录.excalidraw.md",
     "Draw/练习记录.excalidraw.svg",
     "README.md",
@@ -181,7 +182,6 @@
     "Java技术栈/Spring/SpringBoot/AOP/基础.md",
     "springboot.md",
     "Draw/Springboot.canvas",
-    "日记/2024-07-29.md",
     "日记",
     "其他/认证流程图.canvas",
     "前端技术栈/vue/基础/测试.canvas",

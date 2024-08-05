@@ -2,7 +2,7 @@
   "promptDelete": false,
   "useMarkdownLinks": false,
   "showRibbon": false,
-  "showInlineTitle": true,
+  "showInlineTitle": false,
   "trashOption": "none",
   "readableLineLength": true,
   "strictLineBreaks": false,

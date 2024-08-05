@@ -2,7 +2,7 @@
   "Components@@tab-autohide": false,
   "Components@@Ribbon-autohide": false,
   "Components@@tab-title-bar-autohide": false,
-  "Components@@outline-enhanced": true,
+  "Components@@outline-enhanced": false,
   "Editor@@codeblock-style-select": "codeblock-style-customize",
   "Components@@colorful-folder": false,
   "Plugin@@colorful-checkbox": false,
@@ -75,5 +75,6 @@
   "Editor@@h3-accent-color@@light": "#34495E",
   "Editor@@h4-accent-color@@light": "#34495E",
   "Editor@@h5-accent-color@@light": "#34495E",
-  "Editor@@h6-accent-color@@light": "#34495E"
+  "Editor@@h6-accent-color@@light": "#34495E",
+  "Components@@setting-item-title-icon-remove": false
 }
