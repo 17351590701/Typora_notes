@@ -99,14 +99,6 @@
       "key": "L"
     }
   ],
-  "markdown:toggle-preview": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "`"
-    }
-  ],
   "obsidian-excalidraw-plugin:toggle-lock": [],
   "editor:toggle-code": [
     {
@@ -114,15 +106,6 @@
         "Mod"
       ],
       "key": "E"
-    }
-  ],
-  "editor:insert-callout": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "B"
     }
   ],
   "editor:insert-table": [
@@ -135,15 +118,6 @@
     }
   ],
   "workspace:undo-close-pane": [],
-  "editor:toggle-blockquote": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "Y"
-    }
-  ],
   "editor:toggle-numbered-list": [
     {
       "modifiers": [
@@ -180,5 +154,32 @@
       ],
       "key": "P"
     }
-  ]
+  ],
+  "editor:insert-callout": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Y"
+    }
+  ],
+  "editor:toggle-blockquote": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "Y"
+    }
+  ],
+  "editor:toggle-italics": [],
+  "editor:clear-formatting": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "`"
+    }
+  ],
+  "markdown:toggle-preview": []
 }

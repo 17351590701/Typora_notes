@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ece505df057bf047",
+        "id": "ef2a8814478ddc25",
         "type": "tabs",
         "children": [
           {
-            "id": "0314dc37caf01807",
+            "id": "e0f9c4297d1b6c0e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java技术栈/面试整合.md",
+                "file": "Java技术栈/testGit.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java技术栈/面试整合.md"
+                "file": "Java技术栈/testGit.md"
               }
             }
           },
@@ -79,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5,
-    "collapsed": true
+    "width": 353.5
   },
   "right": {
     "id": "c87a6a426ecadb82",
@@ -107,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java技术栈/面试整合.md",
+                "file": "Java技术栈/testGit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,11 +134,14 @@
       "obsidian-excalidraw-plugin:新建绘图文件": true
     }
   },
-  "active": "0314dc37caf01807",
+  "active": "e0f9c4297d1b6c0e",
   "lastOpenFiles": [
-    "Pasted image 20240805213252.png",
     "Java技术栈/面试整合.md",
+    "Java技术栈/testGit.md",
+    "Java技术栈/test.md",
+    "Draw/springboot/spring启动.canvas",
     "Java技术栈/知识点任务列表.md",
+    "Pasted image 20240805213252.png",
     "Draw/练习记录.excalidraw.md",
     "Draw/练习记录.excalidraw.svg",
     "README.md",
@@ -162,7 +164,6 @@
     "Draw/token.excalidraw.png",
     "Draw/DrawIO",
     "Draw/新建文件夹",
-    "Draw/springboot/spring启动.canvas",
     "Java技术栈/Spring/SpringSecurity/springsecurity.md",
     "Pasted image 20240731113249.png",
     "Java技术栈/分布式事务/分布式事务.md",
@@ -180,7 +181,6 @@
     "Java技术栈/Spring/SpringBoot/AOP/自定义.md",
     "Draw/springboot",
     "Java技术栈/Spring/SpringBoot/AOP/基础.md",
-    "springboot.md",
     "Draw/Springboot.canvas",
     "日记",
     "其他/认证流程图.canvas",

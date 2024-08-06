@@ -2,6 +2,8 @@
   "obsidian-excalidraw-plugin",
   "obsidian-outliner",
   "obsidian-style-settings",
-  "obsidian-minimal-settings",
-  "obsidian-hover-editor"
+  "obsidian-image-auto-upload-plugin",
+  "easy-typing-obsidian",
+  "dataview",
+  "obsidian-git"
 ]
