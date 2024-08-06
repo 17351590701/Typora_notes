@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ef2a8814478ddc25",
+        "id": "b19e00471afbbf85",
         "type": "tabs",
         "children": [
           {
-            "id": "e0f9c4297d1b6c0e",
+            "id": "77e424a4af79084b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -58,7 +58,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#excalidraw",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -75,12 +75,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 353.5
+    "width": 353.5,
+    "collapsed": true
   },
   "right": {
     "id": "c87a6a426ecadb82",
@@ -91,18 +91,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "dddcabd45d032d7e",
+            "id": "61cfe619cbccc03d",
             "type": "leaf",
             "state": {
-              "type": "tag",
+              "type": "outgoing-link",
               "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
+                "file": "Java技术栈/面试整合.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "eaa411425d884d18",
+            "id": "1345747da3864107",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -117,13 +118,21 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "90f736624636c622",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 354.5,
-    "collapsed": true
+    "width": 354.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -135,24 +144,25 @@
       "obsidian-excalidraw-plugin:新建绘图文件": true
     }
   },
-  "active": "e0f9c4297d1b6c0e",
+  "active": "90f736624636c622",
   "lastOpenFiles": [
-    "Java技术栈/testGit.md",
+    "Java技术栈/知识点任务列表.md",
+    "Draw/Excaildraw/token.excalidraw.md",
+    "Draw/Excaildraw/Gateway-Auth.excalidraw.md",
+    "Draw/练习记录.excalidraw.md",
+    "Java技术栈/javaSE/时间API.md",
     "Java技术栈/面试整合.md",
+    "Java技术栈/分布式/分布式事务.md",
+    "Java技术栈/分布式/分布式锁.md",
+    "Java技术栈/testGit.md",
     "Java技术栈/test.md",
     "Draw/springboot/spring启动.canvas",
-    "Java技术栈/知识点任务列表.md",
     "Pasted image 20240805213252.png",
-    "Draw/练习记录.excalidraw.md",
     "Draw/练习记录.excalidraw.svg",
     "README.md",
     "任务列表.md",
     "Pasted Image 20240802115509_266.png",
     "未命名.md",
-    "Java技术栈/分布式/分布式锁.md",
-    "Draw/Excaildraw/Gateway-Auth.excalidraw.md",
-    "Draw/Excaildraw/token.excalidraw.md",
-    "Java技术栈/分布式/分布式事务.md",
     "Draw/练习记录.excalidraw.png",
     "Draw/Drawing 2024-08-01 18.09.11.excalidraw.md",
     "Draw/记录.md",
@@ -181,7 +191,6 @@
     "pictrue",
     "Java技术栈/Spring/SpringBoot/AOP/自定义.md",
     "Draw/springboot",
-    "Java技术栈/Spring/SpringBoot/AOP/基础.md",
     "Draw/Springboot.canvas",
     "日记",
     "其他/认证流程图.canvas",
