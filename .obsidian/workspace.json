@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java技术栈/testGit.md",
+                "file": "Java技术栈/面试整合.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java技术栈/testGit.md"
+                "file": "Java技术栈/面试整合.md"
               }
             }
           },
@@ -75,11 +75,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 353.5
+    "width": 353.5,
+    "collapsed": true
   },
   "right": {
     "id": "c87a6a426ecadb82",
@@ -106,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java技术栈/testGit.md",
+                "file": "Java技术栈/面试整合.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,10 +136,10 @@
       "obsidian-excalidraw-plugin:新建绘图文件": true
     }
   },
-  "active": "e0f9c4297d1b6c0e",
+  "active": "0f33688e408592e5",
   "lastOpenFiles": [
-    "Java技术栈/面试整合.md",
     "Java技术栈/testGit.md",
+    "Java技术栈/面试整合.md",
     "Java技术栈/test.md",
     "Draw/springboot/spring启动.canvas",
     "Java技术栈/知识点任务列表.md",
