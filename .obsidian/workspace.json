@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5,
-    "collapsed": true
+    "width": 353.5
   },
   "right": {
     "id": "c87a6a426ecadb82",
@@ -136,7 +135,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": true
     }
   },
-  "active": "0f33688e408592e5",
+  "active": "e0f9c4297d1b6c0e",
   "lastOpenFiles": [
     "Java技术栈/testGit.md",
     "Java技术栈/面试整合.md",
